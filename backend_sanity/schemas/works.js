@@ -37,9 +37,9 @@ export default{
             type:'array',
             of: [
                 {
-                name:'tag',
-                title:'Tag',
-                type:'string'
+                    name:'tag',
+                    title:'Tag',
+                    type:'string'
                 }
             ]
         }    
