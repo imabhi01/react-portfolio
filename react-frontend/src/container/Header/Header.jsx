@@ -17,7 +17,7 @@ const Header = () => {
   }
 
   return (
-    <div className='app__header app_flex' id="home">
+    <div className='app__header' id="home">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0,1]}}
         transition={{duration: 0.5}}
@@ -44,7 +44,9 @@ const Header = () => {
         transition={{duration: 1, delayChildren: 0.5}}
         className="app__header-img"
       >
+        
         <img alt="profile_bg" src={images.profile} />
+        
         <motion.img
           whileInView={{ scale: [0,1] }}
           transition={{ duration: 1, ease: 'easeInOut'}}
