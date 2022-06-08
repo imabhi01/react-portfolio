@@ -48,15 +48,14 @@
     .app__work-item{
         width: 270px;
         flex-direction: column;
-        
 
         margin: 2rem;
         padding: 1rem;
         border-radius: 0.5rem;
         background-color: #fff;
         color: #000;
-        cursor: pointer;
 
+        cursor: pointer;
         transition: all 0.3s ease;
 
         &:hover{
@@ -69,7 +68,7 @@
             border-radius: 0.75rem;
         }
 
-        @media screen and (min-width: 300px) {
+        @media screen and (max-width: 300px) {
             width: 100%;
             margin: 1rem
         }
@@ -96,7 +95,6 @@
 }
 
 .app__work-hover{
-    border: 1px solid #000;
     position: absolute;
     top:0;
     left:0;
