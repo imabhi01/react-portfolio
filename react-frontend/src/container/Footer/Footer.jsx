@@ -16,15 +16,30 @@ const Footer = () => {
 
 
   const handleChangeInput = (e) => {
+    // console.log(e);
     const {name, value} = e.target;
-
+    
     setFormData({...formData, [name] : value});
   }
 
   const handleSubmit = () => {
-    setLoading(true);
-  }
 
+    setLoading(true);
+    console.log(name, email, message);
+    const contact = {
+      _type: 'contact',
+      name: name,
+      email: email,
+      message: message
+    }
+
+    client.create(contact)
+      .then((data) => {
+        console.log(data);
+        setLoading(false);
+        setIsFormSubmitted(true);
+      })
+  }
 
   return (
     <>
@@ -40,33 +55,43 @@ const Footer = () => {
         </div>
       </div>
 
-
-      <div className='app__footer-form app__flex'>
-        <div className='app__flex'>
-          <input type="text" className='p-text' placeholder='Your Name' name='name' value={name} onChange={handleChangeInput} />
-          <input type="text" className='p-text' placeholder='Your Email' name='email' value={email} onChange={handleChangeInput} />
-        </div>
-        <div>
-          <textarea
-            className='p-text'
-            placeholder='Your Message'
-            value={message}
-            name={message}
-            onChange={handleChangeInput}
-          ></textarea>
-        </div>
-
-        <button type='submit' className='p-text' onClick={() => handleSubmit()}>{loading ? 'Sending Message' : 'Send Message'}</button>
-
-      </div>
+      { !isFormSubmitted ?
+        (
+          <div className='app__footer-form app__flex'>
+            <div className='app__flex'>
+              <input type="text" className='p-text' placeholder='Your Name' name='name' value={name} onChange={handleChangeInput} />
+            </div>
+            <div className='app__flex'>
+              <input type="email" className='p-text' placeholder='Your Email' name='email' value={email} onChange={handleChangeInput} />
+            </div>
+            <div>
+              <textarea 
+                className='p-text' 
+                placeholder='Your Message' 
+                name="message" 
+                value={message} 
+                onChange={handleChangeInput}
+              />
+            </div>
+            <button type='submit' className='p-text' onClick={() => handleSubmit()}>{loading ? 'Sending Message' : 'Send Message'}</button>
+          </div>
+        )
+      : 
+        (
+          <div>
+            <h3 className='head-text'>Thank you for getting in touch!</h3> 
+          </div>
+        )
+      }
+      
     </>  
   )
 }
 
-export default AppWrap(Footer, 'footer');
+// export default AppWrap(Footer, 'footer');
 
-// export default AppWrap(
-//   MotionWrap(Footer, 'footer'),
-//   'contact',
-//   'app__whitebg'
-// );
+export default AppWrap(
+  MotionWrap(Footer, 'footer'),
+  'contact',
+  'app__whitebg'
+);

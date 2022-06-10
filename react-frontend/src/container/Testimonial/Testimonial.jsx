@@ -31,7 +31,7 @@ const Testimonial = () => {
 
   const test = testimonials[currentIndex];
 
-  console.log(brands);
+  // console.log(brands);
 
   return (
     <>

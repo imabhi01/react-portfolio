@@ -5,7 +5,7 @@ export default{
     fields: [
         {
             name: 'name',
-            title: 'name',
+            title: 'Name',
             type: 'string'
         },
         {
@@ -14,7 +14,7 @@ export default{
             type: 'string'
         },
         {
-            name: 'imageurl',
+            name: 'imgUrl',
             title: 'ImgURL',
             type: 'image',
             options:{
