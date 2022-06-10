@@ -13,13 +13,12 @@ const Footer = () => {
 
   const {name, email, message} = formData;
 
-  const query = '*[_type == "contact"]';
+  // const query = '*[_type == "contact"]';
 
-  client.fetch(query)
-    .then((data) => {
-      console.log(data);
-    });
-
+  // client.fetch(query)
+  //   .then((data) => {
+  //     console.log(data);
+  //   });
 
   const handleChangeInput = (e) => {
     // console.log(e);
@@ -96,7 +95,7 @@ const Footer = () => {
 // export default AppWrap(Footer, 'footer');
 
 export default AppWrap(
-  MotionWrap(Footer, 'footer'),
+  MotionWrap(Footer, 'app__footer'),
   'contact',
   'app__whitebg'
 );
