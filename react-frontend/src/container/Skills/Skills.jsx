@@ -1,7 +1,7 @@
 import React from 'react'
 import './Skills.scss'
 import {motion} from 'framer-motion'
-import {client, urlFor, useFor} from '../../client'
+import {client, urlFor} from '../../client'
 import {AppWrap, MotionWrap} from '../../wrapper'
 import ReactTooltip from 'react-tooltip';
 import {useState, useEffect} from 'react'

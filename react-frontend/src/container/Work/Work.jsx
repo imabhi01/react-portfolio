@@ -1,7 +1,7 @@
 import React from 'react'
 import './Work.scss'
 import {useState, useEffect} from 'react'
-import {AiFillEve, AiFillGithub, AiFillEye} from 'react-icons/ai'
+import {AiFillGithub, AiFillEye} from 'react-icons/ai'
 import {motion} from 'framer-motion'
 import {urlFor, client} from '../../client'
 import { AppWrap, MotionWrap } from '../../wrapper'
@@ -27,7 +27,7 @@ const Work = () => {
     setAnimateCard([{y: 100, opacity: 0}]);
     setTimeout(() => {
       setAnimateCard([{y:0, opacity:1}]);
-      if(item == 'All'){
+      if(item === 'All'){
         setFilterWork([works]);
       }else{
         setFilterWork(works.filter(work => work.tags.includes(item)));

@@ -1,8 +1,7 @@
 import React from 'react'
 import './Footer.scss'
-import {motion} from 'framer-motion'
-import {useState, useEffect} from 'react'
-import {urlFor, client} from '../../client'
+import {useState} from 'react'
+import {client} from '../../client'
 import {images} from '../../constants'
 import {AppWrap, MotionWrap} from '../../wrapper'
 
@@ -13,6 +12,13 @@ const Footer = () => {
   const [loading, setLoading] = useState(false);
 
   const {name, email, message} = formData;
+
+  const query = '*[_type == "contact"]';
+
+  client.fetch(query)
+    .then((data) => {
+      console.log(data);
+    });
 
 
   const handleChangeInput = (e) => {
@@ -35,7 +41,6 @@ const Footer = () => {
 
     client.create(contact)
       .then((data) => {
-        console.log(data);
         setLoading(false);
         setIsFormSubmitted(true);
       })
