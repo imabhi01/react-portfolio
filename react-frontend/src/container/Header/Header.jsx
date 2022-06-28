@@ -5,7 +5,6 @@ import {images} from '../../constants'
 import { AppWrap } from '../../wrapper'
 
 const Header = () => {
-
   const scaleVariants = {
     whileInView: {
       scale: [0, 1],
