@@ -15,7 +15,7 @@ const Header = () => {
       }
     }
   }
-
+  
   return (
     <div className='app__header app__flex'>
       <motion.div
