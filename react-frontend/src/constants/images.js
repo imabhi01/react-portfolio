@@ -5,6 +5,8 @@ import cpp from '../assets/cpp.png';
 import css from '../assets/css.png';
 import figma from '../assets/figma.png';
 import flutter from '../assets/flutter.png';
+import laravel from '../assets/laravel.png';
+import php from '../assets/php.png';
 import git from '../assets/git.png';
 import graphql from '../assets/graphql.png';
 import html from '../assets/html.png';
@@ -24,8 +26,10 @@ import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
 import profile from '../assets/profile.png';
+import myProfile from '../assets/my-profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
+import myLogo from '../assets/my-logo.png';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -43,6 +47,8 @@ const images = {
   css,
   figma,
   flutter,
+  laravel,
+  php,
   git,
   graphql,
   html,
@@ -60,8 +66,10 @@ const images = {
   about03,
   about04,
   profile,
+  myProfile,
   circle,
   logo,
+  myLogo,
   adidas,
   amazon,
   asus,
