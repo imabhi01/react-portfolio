@@ -99,6 +99,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    margin: 10px;
 }
 
 .app__skills-exp-works{
@@ -124,6 +125,19 @@
     }
 }
 
+
+.work-desc{
+    font-weight: 500;
+    color: var(--gray-color);
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 2 !important;
+
+    @media screen and (max-width: 1300px) {
+        display: none;
+    }
+}
+
 .app__skills-exp-year{
     margin-right: 3rem;
 
@@ -136,7 +150,6 @@
         margin-right: 1rem;
     }
 }
-
 
 .skills-tooltip {
     max-width: 300px !important;
@@ -153,5 +166,12 @@
       font-size: 1.75rem !important;
       max-width: 500px !important;
       line-height: 2 !important;
+    }
+}
+
+// #Tooltip to hide if screen size is greater than 1300px
+@media screen and (min-width: 1300px) {
+    .skills-tooltip {
+        display: none;
     }
 }

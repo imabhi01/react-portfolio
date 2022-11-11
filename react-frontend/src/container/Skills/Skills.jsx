@@ -81,6 +81,8 @@ const Skills = () => {
                       <p className='p-text'>{work.company}</p>
                     </motion.div>
 
+                    <p className='work-desc'>{work.desc}</p>
+
                     <ReactTooltip
                       id={work.name}
                       effect="solid"
