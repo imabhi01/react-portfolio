@@ -13,12 +13,10 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
   useEffect(() => {
     const query = '*[_type == "works"]';
-
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data);
     });
-
   }, []);
 
   const handleWorkFilter = (item) => {
