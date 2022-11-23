@@ -4,6 +4,7 @@ import {useState} from 'react'
 import {client} from '../../client'
 import {images} from '../../constants'
 import {AppWrap, MotionWrap} from '../../wrapper'
+import ReactGa from 'react-ga'
 
 const Footer = () => {
 
@@ -23,14 +24,12 @@ const Footer = () => {
   const handleChangeInput = (e) => {
     // console.log(e);
     const {name, value} = e.target;
-    
     setFormData({...formData, [name] : value});
   }
 
   const handleSubmit = () => {
-
     setLoading(true);
-    console.log(name, email, message);
+    // console.log(name, email, message);
     const contact = {
       _type: 'contact',
       name: name,
@@ -42,6 +41,11 @@ const Footer = () => {
       .then((data) => {
         setLoading(false);
         setIsFormSubmitted(true);
+        ReactGa.event({
+          category: contact.name,
+          action: "Testing email",
+          label: "testing",
+        })
       })
   }
 
