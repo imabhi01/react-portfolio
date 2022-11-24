@@ -7,15 +7,12 @@ import {AppWrap, MotionWrap} from '../../wrapper'
 import ReactGa from 'react-ga'
 
 const Footer = () => {
-
   const [formData, setFormData] = useState({name: '', email: '', message: ''})
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
   const {name, email, message} = formData;
-
+  
   // const query = '*[_type == "contact"]';
-
   // client.fetch(query)
   //   .then((data) => {
   //     console.log(data);
