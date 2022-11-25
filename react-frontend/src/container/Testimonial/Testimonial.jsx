@@ -31,8 +31,6 @@ const Testimonial = () => {
 
   const test = testimonials[currentIndex];
 
-  // console.log(brands);
-
   return (
     <>
       {
@@ -82,5 +80,5 @@ const Testimonial = () => {
 export default AppWrap(
   MotionWrap(Testimonial, 'app__testimonial'), 
   'testimonials',
-  'app__primarybg'
+  'app__whitebg'
 );

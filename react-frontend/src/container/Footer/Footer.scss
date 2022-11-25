@@ -61,7 +61,8 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-    background-color: #f2f7fb;
+    // background-color: #f2f7fb;
+    background-color: #fff;
 }
 
 .app__footer-cards .app__footer-card:last-child:hover {
@@ -87,7 +88,7 @@
             padding: 0.95rem;
             border: none;
             border-radius: 7px;
-            background-color: var(--primary-color);
+            // background-color: var(--primary-color);
 
             font-family: var(--font-base);
             color: var(--secondary-color);
