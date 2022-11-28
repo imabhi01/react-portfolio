@@ -78,7 +78,7 @@ const Certifications = () => {
             className="app__certification-item"
             key={certificate.title + index}
           >
-            <a href={urlFor(certificate.imgUrl)} target="_blank"><img src={urlFor(certificate.imgUrl)} alt={certificate.title} /></a>
+            <a href={urlFor(certificate.imgUrl)} rel="noreferrer" target="_blank"><img src={urlFor(certificate.imgUrl)} alt={certificate.title} /></a>
             <h2 className='bold-text' style={{ marginTop: '20px'}}>{certificate.title}</h2>
             <p className='p-text' style={{ marginTop: '20px'}}>{certificate.issuingOrganization}</p>
           </motion.div>
