@@ -1,14 +1,13 @@
 import React from 'react'
 import BlogHeader from '../components/BlogHeader/BlogHeader'
 
-const Blog = () => {
+const Posts = () => {
   return (
     <div className="app">
-      {/* <BlogHeader/> */}
-      {/* <Content/> */}
-      TEST
+      <BlogHeader/>
+      POSTS
     </div>
   )
 }
 
-export default Blog
+export default Posts

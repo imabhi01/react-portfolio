@@ -1,6 +1,7 @@
 import React from 'react'
 import App from './App'
 import Blog from './pages/Blog'
+import Posts from './pages/Posts'
 import './index.css'
 import { createRoot }  from 'react-dom/client';
 import ReactDOM from "react-dom/client";
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     {
       path: "/blog",
       element: <Blog/>,
+    },
+    {
+      path: "/posts",
+      element: <Posts/>,
     },
 ]);
 
